@@ -245,7 +245,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li><p>Filtering based on the percentage of missing values.</p></li>
 <li><p>Imputation of missing data to ensure robust downstream
 analysis.</p></li>
-<li><p>Description fetching for DIA-NN input files: .pg_matrix.tsv, and
+<li><p>Description fetching for DIA-NN files (.pg_matrix), and
 ProteomeDiscoverer input files.</p></li>
 </ol>
 <div id="normalization" class="section level2">
@@ -269,8 +269,8 @@ sample. Total Ion Current normalization then rescales the values by
 multiplying them by the average Total Ion Current while Parts Per
 Million (PPM) normalization scales the values by multiplying them by one
 million. Lastly, Variable Stabilizing Normalization is also available
-implementing the corresponding function of the vsn package . Because the
-data output from DIA-NN has already been normalized with the MaxLFQ
+implementing the corresponding function of the limma package . Because
+the data output from DIA-NN has already been normalized with the MaxLFQ
 quantification, extra normalizing methods are suggested to be selected
 cautiously.</p>
 </div>
@@ -316,9 +316,9 @@ provide descriptive information for each Protein ID. To address this
 issue, the function <code>dianno</code> includes an argument called
 <code>description</code>, which allows for the retrieval of descriptive
 information such as gene names, organisms, and more. This option is also
-available for Proteome Discoverer inputs that lack this information.
-Detailed data is obtained from the UniProt database, using the
-UniProt.ws package. The Description information will be shown in each
+available for <em>Proteome Discoverer</em> inputs that lack this
+information. Detailed data is obtained from the UniProt database, using
+the UniprotR package. The Description information will be shown in each
 Excel file created that contains the dataset.</p>
 </div>
 <div id="statistical-analysis" class="section level2">
@@ -385,9 +385,9 @@ setting <code>significance = &quot;p&quot;</code> uses a raw p-value threshold o
 adjusted p-value threshold.</p>
 <p>A PCA plot is then generated based on the significant proteins.</p>
 <p>Additionally, a heatmap of the significant proteins is generated
-using the ComplexHeatmap package. Proteins are clustered based on
-euclidean distance in abundance patterns across groups, and the heatmap
-provides an overview of group-specific differences.</p>
+using the pheatmap package. Proteins are clustered based on euclidean
+distance in abundance patterns across groups, and the heatmap provides
+an overview of group-specific differences.</p>
 <p>Lastly, an excel file names Quality_check.xlsx provides information
 about the percentage of missing values before and after filtering, along
 with the scores of the first 2 principal components for each sample.</p>

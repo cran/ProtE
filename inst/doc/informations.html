@@ -355,15 +355,17 @@ and Proteome Discoverer.</p>
 case.</p>
 <ol style="list-style-type: decimal">
 <li><code>maximum_quantum()</code> accepts as input the MaxQuant
-generated file ProteinGroups.txt</li>
+generated file ProteinGroups.txt or the same file transposed to .xlsx
+format</li>
 <li><code>dianno()</code> accepts as input either of the two DIA-NN (or
-the FragPipe - DIANN) output files pg_matrix.tsv or
-unique_genes_matrix.tsv</li>
+the FragPipe - DIANN) output files pg_matrix.tsv /
+unique_genes_matrix.tsv or the same files transposed to .xlsx
+format</li>
 <li><code>pd_single()</code> accepts as input the Proteome Discoverer
 output file that contains all sample protein intensities/abundances in
-one table</li>
+one table in .xlsx format</li>
 <li><code>pd_multi()</code> accepts as input separate Proteome
-Discoverer protein intensity files</li>
+Discoverer protein intensity files in .xlsx format</li>
 </ol>
 </div>
 <div id="how-to-use-functions-maximum_quantumdiannopd_multi" class="section level2">
@@ -380,8 +382,8 @@ samples, last columns = Compound samples.</p>
 <div id="seting-up-the-input-file-path" class="section level2">
 <h2>Seting up the input file path:</h2>
 <p>Assuming a MaxQuant quantification has been performed, the file
-ProteinGroups.txt can be fed to ProtE with the function
-<code>maximum_quantum</code>.</p>
+ProteinGroups.txt (or ProteinGroups.xlsx) can be fed to ProtE with the
+function <code>maximum_quantum</code>.</p>
 <p>Insert the file path of the ProteinGroups.txt in the
 <code>file</code> parameter. To copy-paste the file path in Windows,
 firstly locate the desired file inside your folders. Hold Shift and
@@ -462,7 +464,7 @@ in more details in the <code>ProtE Guide</code> vignette.</p>
 protein.</p></li>
 <li><p>Imputation of missing data to ensure robust downstream
 analysis.</p></li>
-<li><p>Description fetching for DIA-NN’s .pg_matrix.tsv and Proteome
+<li><p>Description fetching for DIA-NN’s .pg_matrix and Proteome
 Discoverer files</p></li>
 </ol>
 <p>Once the data processing is complete, the package performs
@@ -485,7 +487,7 @@ variability across groups.</p>
 directory of the provided file(s).</p>
 <p>ProtE creates 3 sub-folders: • Data_processing, with the files of the
 resulting data processing. • Statistical_Analysis, with the results of
-the statistical tests. • Plots, with all the plots saved in bmp.
+the statistical tests. • Plots, with all the plots saved in .bmp
 format.</p>
 </div>
 
