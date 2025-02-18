@@ -2,7 +2,7 @@ Package: ProtE
 Type: Package
 Title: Processing Proteomics Data, Statistical Analysis and
         Visualization
-Version: 1.0.2
+Version: 1.0.3
 Authors@R: 
     c(person("Theodoros", "Margelos", email = "ted.margelos02@gmail.com",role = c("aut","cre","cph")),
     person("Rafael", "Stroggilos", email = "rstrog@bioacademy.gr", role = c("ctb","cph")))
@@ -21,9 +21,9 @@ Depends: R (>= 2.10)
 VignetteBuilder: knitr
 Language: en-US
 NeedsCompilation: no
-Packaged: 2025-02-17 18:04:31 UTC; tedma
+Packaged: 2025-02-18 10:11:46 UTC; tedma
 Author: Theodoros Margelos [aut, cre, cph],
   Rafael Stroggilos [ctb, cph]
 Maintainer: Theodoros Margelos <ted.margelos02@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-02-17 18:30:02 UTC
+Date/Publication: 2025-02-18 10:40:02 UTC
